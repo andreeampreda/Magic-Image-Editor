@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Magic editor</title>
+    <name="decription" content="theme 4 - image editor">
+
+    <link rel="stylesheet" href="4_1097_PREDA_Maria_Andreea.css">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <div class="buttons-top">
+        <div class="button file-upload">
+            <i class="bi bi-file-earmark-arrow-up"></i>
+            <input type="file" id="foto-file" accept="image/*">
+        </div>
+
+        <button class="button save-button">
+            <i class="bi bi-download"></i>
+        </button>
+
+        <button class="button crop-button">
+            <i class="bi bi-aspect-ratio"></i>
+        </button>
+
+        <button class="button select-button">
+            <i class="bi bi-box-arrow-up-right"></i>
+        </button>
+
+        <button class="button deleteSelection-button">
+            <i class="bi bi-x-square"></i>
+        </button>
+
+        <button class="button resize-button">
+            <i class="bi bi-crop"></i>
+        </button>
+        <div class="resize-container hidden">
+            <label>
+                Lățime: <input type="number" id="resize-width" placeholder="Noua lățime">
+            </label>
+            <label>
+                Înălțime: <input type="number" id="resize-height" placeholder="Noua înălțime">
+            </label>
+            <button id="apply-resize" class="button">Aplică Dimensiuni</button>
+        </div>
+
+        <button class="button text-button">
+            <i class="bi bi-fonts"></i>
+        </button>
+
+        <div class="text-inputs hidden">
+            <label for="text-content">Text:</label>
+            <input type="text" id="text-content" placeholder="Introduceți textul">
+        
+            <label for="text-size">Dimensiune (px):</label>
+            <input type="number" id="text-size" placeholder="20" min="10" value="20">
+        
+            <label for="text-color">Culoare:</label>
+            <input type="color" id="text-color" value="#000000">
+        
+            <label for="text-x">Poziție X:</label>
+            <input type="number" id="text-x" placeholder="100" min="0" value="100">
+        
+            <label for="text-y">Poziție Y:</label>
+            <input type="number" id="text-y" placeholder="100" min="0" value="100">
+        
+            <button id="apply-text">Adaugă Text</button>
+        </div>
+        
+
+        <button class="button reset-button">
+            <i class="bi bi-arrow-counterclockwise"></i>
+        </button> 
+
+    </div>
+
+    <div class="effects-container">
+        <button type="button" class="btn-effect" data-effect="grayscale">Grayscale </button>
+        <button type="button" class="btn-effect" data-effect="brightness">Brightness</button>
+        <button type="button" class="btn-effect" data-effect="contrast">Contrast</button>
+        <button type="button" class="btn-effect" data-effect="posterize">Posterize</button>
+        <button type="button" class="btn-effect" data-effect="blue">Blue</button>
+    </div>
+
+    <script src="4_1097_PREDA_Maria_Andreea.js"></script>
+
+</body>
+</html>
